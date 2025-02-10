@@ -1,0 +1,90 @@
+
+body {
+    background: url('pic.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top center;
+    transform: translateX(0%);
+    overflow-y: auto;
+    padding-right: 30%;
+    font-size: 1.5vw;
+}
+
+
+h1 {
+    color: rgb(27, 46, 103);
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2 {
+    color: rgb(29, 91, 22);
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 250%;
+}
+
+input {
+    width: 18%;
+    margin-left: 80%;
+}
+
+
+/*Class*/
+/*filling status*/
+.options-filling-status-single, .options-filling-status-married, .options-filling-status-household {
+    margin-left: 0%;
+    width: 10%;
+}
+
+
+
+/*digital assets*/
+.options-digital-assets-yes, .options-digital-assets-no {
+    margin-left: 0%;
+    width: 10%;
+}
+
+
+/*dependent*/
+.options-deduction-dependent, .options-deduction-spouse-dependent, .options-deduction-none-dependent {
+    margin-left: 0%;
+    width: 10%;
+}
+
+
+
+/*filling the form*/
+/*income*/
+.add-lines-1, .add-lines-2, .add-lines-3, .add-lines-4, .add-lines-5, .add-lines-6, .add-lines-7, .add-lines-8, .add-lines-9, .add-lines-10 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 120%;
+    font-weight: bold;
+    background-color:rgb(149, 157, 219);
+    color: aliceblue;
+}
+
+.subtract-1, .subtract-2, .subtract-3, .subtract-4 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: bold;
+    background-color:rgb(222, 144, 174);
+    color: aliceblue;
+}
+
+
+/*result*/
+.result {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: rgb(111, 57, 41);
+    background-color: rgb(227, 201, 168);
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 250%;
+    font-weight: bold;
+}
+
