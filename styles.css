@@ -9,8 +9,7 @@ body {
     overflow-y: auto;
     padding-right: 30%;
     font-size: 1.5vw;
-    transform: scale(0.1);
-    transform-origin: 0% 0%;
+    zoom: normal;
 }
 
 
