@@ -696,7 +696,7 @@ document.querySelector('.estimated-tax-payments').addEventListener('input', func
 
     //subtract 3
     var subtract3 = 0;
-    subtract3 = addline3 - estimateTaxPayments;
+    subtract3 = addline2 - addline3 - estimateTaxPayments;
     if (subtract3 < 0) {
         subtract3 = 0;
     }
