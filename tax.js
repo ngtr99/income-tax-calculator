@@ -859,6 +859,15 @@ var calculateTax = 0;
 document.querySelectorAll('.earned-income-credit, .additional-child-tax-credit, .american-opportunity-credit, .schedule-3-line-15, .forms-w2, .forms-1099, .schedule-3-line-8, .other-forms, .estimated-tax-payments, .other-form-tax, .schedule-2-line-3, .schedule-3-line-8, .dependent-child, .schedule-2-line-21, .estimate-tax').forEach(input => {
     input.addEventListener('input', function() {
     calculateTax = subtract3 + subtract5 + estimateTax;
+    if (document.querySelector('.options-filling-status-single').checked) {
+        calculateTax = menuTaxDigitalAssets['single'](calculateTax);
+    }
+    if (document.querySelector('.options-filling-status-married').checked) {
+        calculateTax = menuTaxDigitalAssets['married'](calculateTax);
+    }
+    if (document.querySelector('.options-filling-status-household').checked) {
+        calculateTax = menuTaxDigitalAssets['household'](calculateTax);
+    }
     document.querySelector('.result').textContent = 'You must pay the tax of ' + calculateTax;
     })
 })
