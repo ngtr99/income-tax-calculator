@@ -683,6 +683,8 @@ document.querySelectorAll('.forms-w2, .forms-1099, .schedule-3-line-8, .other-fo
 
 //estimated tax payments
 var estimateTaxPayments = 0;
+var subtract3 = 0;
+var subtract1 = 0;
 document.querySelector('.estimated-tax-payments').addEventListener('input', function(event) {
     estimateTaxPayments = parseFloat(event.target.value) || 0;
 
@@ -690,12 +692,10 @@ document.querySelector('.estimated-tax-payments').addEventListener('input', func
     document.querySelector('.adjustments-income').textContent = '10. Adjustments to income from Schedule 1, line 26: ' + estimateTaxPayments;
 
     //subtract 1
-    var subtract1 = 0;
     subtract1 = addline2 - estimateTaxPayments;
     document.querySelector('.subtract-1').textContent = '11. Subtract line 10 from line 9. This is your adjusted gross income: ' + subtract1;
 
     //subtract 3
-    var subtract3 = 0;
     subtract3 = addline2 - addline3 - estimateTaxPayments;
     if (subtract3 < 0) {
         subtract3 = 0;
@@ -858,7 +858,7 @@ var calculateTax = 0;
 
 document.querySelectorAll('.earned-income-credit, .additional-child-tax-credit, .american-opportunity-credit, .schedule-3-line-15, .forms-w2, .forms-1099, .schedule-3-line-8, .other-forms, .estimated-tax-payments, .other-form-tax, .schedule-2-line-3, .schedule-3-line-8, .dependent-child, .schedule-2-line-21, .estimate-tax').forEach(input => {
     input.addEventListener('input', function() {
-    calculateTax = subtract5 + estimateTax;
+    calculateTax = subtract3 + subtract5 + estimateTax;
     document.querySelector('.result').textContent = 'You must pay the tax of ' + calculateTax;
     })
 })
